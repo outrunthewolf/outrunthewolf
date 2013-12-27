@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<section class="post">
+	{% for post in site.posts %}
+		<article class="clearfix">
+			<header>
+				<h3><a href="{{ entry.link }}">{{ post.title }}</a></h3>
+			</header>
+			<p>
+				{{ post.description }}
+			</p>
+		</article>
+	{% endfor %}
+</section>
