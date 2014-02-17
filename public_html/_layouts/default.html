@@ -4,37 +4,36 @@
 		{% include head.html %}
 	</head>
 	<body>
-	<div id="container"></div>
-	<div class="holder">
-        <header class="clearfix page-header">
-            <h1><a href="outrunthewolf.com"></a></h1>
-        </header>
-		<div class="clearfix"></div>
-		
-		{{ content }}
+		<div id="container">
+	        <header class="clearfix page-header">
+	            <h1><a href="{{ site.baseurl }}">{{ site.name }}</a></h1>
+	        </header>
+			
+			{{ content }}
 
-		<footer class="clearfix">
-			<p class="version">version: {{ app.config.general.version }}</p>
-			<nav>
+			<footer class="clearfix">
+				<p class="version">version: {{ site.version }}</p>
+				
 				<ul>
+					<li><a href="{{ site.twitterLink }}" title="Twitter">{{ site.twitterCreator }}</a></li>
+					<li><a href="{{ site.googleLink }}" rel="author" title="Google Plus">{{ site.googleCreator }}</a></li>
 				</ul>
-			</nav>
-		</footer>
-	</div>
+			</footer>
 
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '{{ app.config.general.analytics }}']);
-	  _gaq.push(['_trackPageview']);
+		</div>
 
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', '{{ site.analytics }}']);
+		  _gaq.push(['_trackPageview']);
 
-</body>
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
 </html>
 
 

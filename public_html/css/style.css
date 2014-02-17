@@ -1,18 +1,17 @@
 @font-face {
 font-family:OleoScript;
-src:url(../fonts/OleoScriptSwashCaps-Regular.otf), url(../fonts/OleoScriptSwashCaps-Regular.ttf), url(../fonts/OleoScriptSwashCaps-Regular.eot), url(../fonts/OleoScriptSwashCaps-Regular.woff), url(../fonts/OleoScriptSwashCaps-Regular.svg);
+src:url(../fonts/oleoscript-regular-webfont.otf), url(../fonts/oleoscript-regular-webfont.ttf), url(../fonts/oleoscript-regular-webfont.eot), url(../fonts/oleoscript-regular-webfont.woff), url(../fonts/oleoscript-regular-webfont.svg);
 }
 
 body {
-background-color:#333;
 font-family:arial;
 }
 
 header.page-header {
 border-bottom:solid 1px rgb(203,203,255);
 margin-bottom:10px;
-padding-bottom:10px;
-margin-top:0;
+padding-bottom:12px;
+margin-top:12px;
 }
 
 header nav {
@@ -44,6 +43,7 @@ float:left;
 font-family:OleoScript;
 font-weight:normal;
 font-size:50px;
+color: #333;
 }
 
 .holder {
@@ -56,44 +56,45 @@ margin-top:20px;
 }
 
 #container {
-background:#333;
-position:fixed;
 height:100%;
-width:100%;
+max-width:660px;
+margin:0px auto;
 z-index:-1;
-top:0;
 }
 
 h1,h1 a {
-color:#00798F;
+color:#2D94D8;
 font-size:xx-large;
+font-family:OleoScript;
 }
 
 h2,h2 a {
-color:#333;
-font-size:x-large;
+color: #2D94D8;;
+font-size:xx-large;
+font-family:OleoScript;
 }
 
 h3,h3 a {
-color:#333;
+color:#000;
 font-size:large;
 line-height:30px;
 }
 
 h4 {
-color:#333;
+color:#000;
 font-weight:200;
 font-size:medium;
 font-family:Arial;
 }
 
 p {
-color:#222;
-font-size:small;
+color:#333;
+font-size:medium;
+line-height: 22px;
 }
 
 a {
-color:#00798F;
+color:#2D94D8;
 }
 
 a:hover {
@@ -102,7 +103,7 @@ text-decoration:none;
 }
 
 blockquote {
-color:#00798F;
+color:#2D94D8;
 background:#dedede;
 }
 
@@ -138,9 +139,8 @@ article span {
 font-size:12px;
 }
 
-.post {
-float:left;
-width:70%;
+.post h1 {
+	margin-top: 20px;
 }
 
 aside {
@@ -196,19 +196,23 @@ padding-top:10px;
 footer nav {
 }
 
-footer nav ul {
+footer ul {
 list-style-type:none;
 float:right;
 }
 
-footer nav ul li {
+footer ul li {
 display:inline;
 float:left;
 margin-left:10px;
 margin-right:10px;
 }
 
-footer nav ul li a {
+footer ul li:last-child {
+	margin-right: 0px;
+}
+
+footer ul li a {
 display:block;
 font-size:12px;
 }

@@ -1,9 +1,22 @@
-name: "outrunthewolf.com"
+name: "#outrunthewolf"
 description: "I hate you"
+title: "ourunthewolf"
+version: 1.1.0
 
-url: "http://localhost:4000"
+url: "http://outrunthewolf.com"
 baseurl: /
+analytics: 12345
 
 paginate: 10
-
 permalink: pretty
+
+# Twitter Shit
+twitterCard: "summary"
+twitterCreator: "@outrunthewolf"
+twitterLink: "http://twitter.com/outrunthewolf"
+
+# Facebook stuff
+
+# Google Stuff
+googleLink: "http://plus.google.com/outrunthewolf"
+googleCreator: Google+
