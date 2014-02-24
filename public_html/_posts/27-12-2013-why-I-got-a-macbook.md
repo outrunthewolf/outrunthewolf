@@ -24,13 +24,10 @@ The build quality is amazing, like truly fantastic. The keys are backlit, its no
 And hell, its a mac!
 
 ### Conclusion
-Although price is still an issue for me (I tend to not dwell on how much I spent). I could never go back to any other laptop.
-The battery lasts all day and some, I can carry the thing around with me forever and its half the weight of my old laptop.
-I've already corrupted the hard drive twice, and the restore from the cloud feature is a great, coupled with boxen its a life-saver.
-The gestures on the trackpad, copied poorly by my old samsung laptop are really helpful and intuitive.
+Although price is still an issue for me (I tend to not dwell on how much I spent). I could never go back to any other laptop. The battery lasts all day and some, I can carry the thing around with me forever and its half the weight of my old laptop. I've already corrupted the hard drive twice, and the restore from the cloud feature is a great, coupled with boxen its a life-saver. The gestures on the trackpad, copied poorly by my old samsung laptop are really helpful and intuitive.
 And so on.
 
-Overall I dont advocate everyone get a mac, Its all about use case. Its great to develop on, but I live in constant fear of dropping, scratching, or breaking it.
+So overall I dont advocate everyone get a mac, but if you use your laptop constantly, and find you want a reliable and sturdy device, something that you're going to use for some time to come, and want all the benefits of a unix system... Check out a MacBook.
 
 
 

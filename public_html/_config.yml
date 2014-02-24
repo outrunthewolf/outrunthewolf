@@ -1,7 +1,7 @@
 name: "#outrunthewolf"
 description: "I hate you"
-title: "ourunthewolf"
-version: 1.1.0
+title: "outrunthewolf"
+version: 1.1.2
 
 url: "http://outrunthewolf.com"
 baseurl: /
@@ -20,3 +20,6 @@ twitterLink: "http://twitter.com/outrunthewolf"
 # Google Stuff
 googleLink: "http://plus.google.com/outrunthewolf"
 googleCreator: Google+
+
+# Github
+githubLink: "https://github.com/outrunthewolf"
