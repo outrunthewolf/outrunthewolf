@@ -22,4 +22,5 @@ We instituted a "no direct reads/writes" rule for the SQL backend. What this mea
 Now I'm all up for dropping the SQL database and working directly from Redis, but people are still a little nervous about losing something as solid as an SQL database for something new like Redis, we also need to consider the fact that for some reason Redis could fail. This leaves us with the small issue of maintaining the SQL database in sync with Redis.
 
 We've analysed a few approaches, using publish methods from Redis to make asynchronous transacions, PHP cronjobs reading data back and forth. The apporach we've taken is to use Python to read the RDB dump files directly from the disk, parse them into JSON, and insert the data into MYSQL.
- 
+
+We used the fantastic [RDB Tools](https://github.com/sripathikrishnan/redis-rdb-tools "RDB Tools") 
