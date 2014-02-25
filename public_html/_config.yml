@@ -5,7 +5,7 @@ version: 1.1.2
 
 url: "http://outrunthewolf.com"
 baseurl: /
-analytics: 12345
+analytics: "UA-34540071-1"
 
 paginate: 10
 permalink: pretty
