@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+				<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>outrunthewolf</title>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+		<!-- Page meta stuff -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="start" href="" title="">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:title" content="">
+		<meta property="og:image" content="">
+		<meta property="og:site_name" content="">
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="">
+		<meta name="twitter:title" content="">
+		<meta name="twitter:description" content="6 months with Docker, some advice">
+		<meta name="twitter:creator" content="@outrunthewolf">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/201402172305.min.css"/>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="container">
+	        <header class="clearfix page-header">
+	            <h1><a href="/">#outrunthewolf</a></h1>
+	        </header>
+			
+			<article class="post">
+    <h1>6 months with Docker, some advice</h1>
+
+    <p>I’ve been using docker on Linux and Mac for 6 months now and my experiences have ranged from joy to deep, sobbing in the dark, frustration. Like any technology, you have to learn how to use it properly to get the best from it. I’m going to try and outline my biggest stumbling block with docker and some simple advice on moving past them nd using it succesfully.</p>
+
+<h3 id="mount_hell">Mount Hell</h3>
+
+<p>A very early mistake was combining files and configurations within the container itself. For example, I would build my nginx configs into the dockerfile with add straight off. As soon as I found a problem with my virtual hosts, or wanted to extend them, I would have to run the entire build sequence again. Consider your application carefully, mount your files and configurations to the container, and maintain their relative and locations with your dockerfile, this gives you the ability to change data on your local system easily affecting your containers immediately.</p>
+
+<h3 id="the_endless_build">The Endless Build</h3>
+
+<p>One of my biggest mistakes was to place too much emphasis on the docker file. My routine would be to create the perfect dockerfile, build it and run it demonised immediately. This lead to endless headaches. Sometimes my nginx configurations would fail, php-fpm wouldn’t start, mysql would consistently throw errors, or my mount points would be wrong.</p>
+
+<p>The key I found was to use the dockerfile to scaffold my application, then run it interactively. Once I knew things were working correctly I would commit my container, maintaining version tags, and then update my dockerfile for use again later.</p>
+
+<h3 id="lack_of_isolation">Lack Of Isolation</h3>
+
+<p>Dockers major benefit is being able to isolate services separately, in fact its one of the whole points of docker. If your running a stack with docker split it up into its subsidiaries, for example a container that runs Apache and one that handles MYSQL. Then link these container to each other. That way if you ever need an nginx container with MYSQL its trivial to attach new instances of them.</p>
+
+<h3 id="documentation">Documentation</h3>
+
+<p>Read the docs. Especially with regards to dockers CLI. Too often did I miss a trick, or want for something that I thought didn’t exist. Docker is still very new, and really cool things are happening all the time. Docker has some very helpful documentation, and its really quick to get a good understanding of what is possible, so keep your finger in the pulse and check up on it regularly.</p>
+
+<h3 id="know_when_youre_beaten">Know When You’re Beaten</h3>
+
+<p>Docker might seem a panacea to many solutions, but it isnt. Know when you should and shouldn’t use it. Its always exciting to introduce something new, and too many times i’ve gone blustering in advocating its possibilities against the practicalities.</p>
+
+<h3 id="seriously_build_from_source">Seriously, Build From Source</h3>
+
+<p>Because its still new, things are still changing and aptitude or brew or whatever can sometimes be a bit hissy and not keep you as updated as you like. Build it from source, its good practice, you can update regularly without hassle, and you might want to build it with certain parameters you wouldn’t normally have the option to use.</p>
+
+<h3 id="ask">ASK!</h3>
+
+<p>Dockers community like many are super friendly, if you’re stuck ask. The have a very active IRC channel I regularly use, and when you ask enough questions you often find yourself being able to help out other people, which feels great!</p>
+
+    <a href="/"><- Back</a>
+
+    <div class="clearfix"></div>
+</article>
+
+			<footer class="clearfix">
+				<p class="version">version: 1.1.2</p>
+				
+				<ul>
+					<li><a href="http://twitter.com/outrunthewolf" title="Twitter" target="_blank">Twitter</a></li>
+					<li><a href="https://github.com/outrunthewolf?rel=author" title="GitHub" target="_blank">GitHub</a></li>
+					<li><a href="http://plus.google.com/outrunthewolf?rel=author" title="Google+" target="_blank">Google+</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', '12345']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
+</html>
+
+
