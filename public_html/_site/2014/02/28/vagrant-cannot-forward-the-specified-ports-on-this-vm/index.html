@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+				<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>outrunthewolf</title>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+		<!-- Page meta stuff -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="start" href="" title="">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:title" content="">
+		<meta property="og:image" content="">
+		<meta property="og:site_name" content="">
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="">
+		<meta name="twitter:title" content="">
+		<meta name="twitter:description" content="Vagrant cannot forward the specified ports on this VM">
+		<meta name="twitter:creator" content="@outrunthewolf">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/201402172305.min.css"/>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="container">
+	        <header class="clearfix page-header">
+	            <h1><a href="/">#outrunthewolf</a></h1>
+	        </header>
+			
+			<article class="post">
+    <h1>Vagrant cannot forward the specified ports on this VM</h1>
+
+    <p>I use vagrant on mac for Docker. When Vagrant boots it opens up all ports between 4000 and 5000 which are the random ports Docker uses to forward to its local connections.</p>
+
+<p>When I ran Vagrant for the first time after installing an OSX patch I kept getting this error:</p>
+
+<p><img src="/images/vagrant-port-error.png" alt="Vagrant Port Error" /></p>
+
+<p>At first I thought there was a left over VM still running, so I looked for an instance of Virtual Box.</p>
+
+<pre class="sh"><code class="sh">$ ps -ef | grep VBox</code></pre>
+
+<p>Nothing. So I then checked what programs were listening on what port.</p>
+
+<pre class="sh"><code class="sh">$ lsof -i | grep LISTEN</code></pre>
+
+<p>Interestingly it turned out that Steam (the game client) and AeroFS (a backup program) were both utilising some of Dockers ports. Closing Steam and AeroFS fixed the issue, but I never knew they utilised those ports. Something to keep in mind.</p>
+
+    <a href="/"><- Back</a>
+
+    <div class="clearfix"></div>
+</article>
+
+			<footer class="clearfix">
+				<p class="version">version: 1.1.2</p>
+				
+				<ul>
+					<li><a href="http://twitter.com/outrunthewolf" title="Twitter" target="_blank">Twitter</a></li>
+					<li><a href="https://github.com/outrunthewolf?rel=author" title="GitHub" target="_blank">GitHub</a></li>
+					<li><a href="http://plus.google.com/outrunthewolf?rel=author" title="Google+" target="_blank">Google+</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34540071-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
+</html>
+
+

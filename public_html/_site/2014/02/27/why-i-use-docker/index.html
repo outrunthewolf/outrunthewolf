@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+				<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>outrunthewolf</title>
+		<meta name="viewport" content="width=device-width, maximum-scale=1.0"/>
+
+		<!-- Page meta stuff -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="start" href="" title="">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:title" content="">
+		<meta property="og:image" content="">
+		<meta property="og:site_name" content="">
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content="">
+		<meta name="twitter:title" content="">
+		<meta name="twitter:description" content="Why I use Docker">
+		<meta name="twitter:creator" content="@outrunthewolf">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="/css/201402172305.min.css"/>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="container">
+	        <header class="clearfix page-header">
+	            <h1><a href="/">#outrunthewolf</a></h1>
+	        </header>
+			
+			<article class="post">
+    <h1>Why I use Docker</h1>
+
+    <p>One of the main reasons I use Docker is to liberate my working environment from dependencies.</p>
+
+<p>I often find myself running multiple stacks, nginx, Apache, Jekyll etc… On top of that they all have their depencies.</p>
+
+<p>When you’re using a single machine you will constantly find yourself installing these dependencies and web stacks over and over, sometimes they conflict, sometimes you need different versions, and all the while if your not using Apache today, its sat around quietly wasting resources.</p>
+
+<h3 id="how_docker_helps">How Docker helps</h3>
+
+<p>By using docker you can free your system from all these applications and run them whenever you truly need them.</p>
+
+<p>Docker also gives you the ability to drill this down further.</p>
+
+<p>Let’s say I maintain a specific nginx container, I also have Zend container and a Laravel container. When i know I’ll be using Zend or laravel with nginx, I simply boot a new instance of the framework contaoner, extending the base nginx container, and bobs your uncle a fully working web stack and framework independent of your local machine.</p>
+
+<p>Most of these containers I’m in the middle of moving to my home server, to speed up the process and localise things more effectively.</p>
+
+<h3 id="start_small">Start small</h3>
+
+<p>It takes a little time to set up, but in the long run its quick to use, very easy to update for new or even multiple versions of a particular application.</p>
+
+<p>I started off by identifying my most commonly used applications, and working them into Dockerfiles, I only started with projects that weren’t overly important or had tight deadlines. This way I got used to using docker and over time built up quite a few container types.</p>
+
+<h3 id="final_state_of_affairs">Final state of affairs</h3>
+
+<p>My laptop now only contains my personal files and my code repositories. I run PHP, Ruby, Python and Go, along with Apache, Nginx, MySQL, Mongo and Redis all within their own containers, none of those programs actually exist natively on my laptop.</p>
+
+<p>I do have to boot a container each time I want to use them, but it takes little to no effort, and once my application is done, I can package the whole thing up within a docker container, and run it wherever I like, without having to worry about missing dependencies.</p>
+
+    <a href="/"><- Back</a>
+
+    <div class="clearfix"></div>
+</article>
+
+			<footer class="clearfix">
+				<p class="version">version: 1.1.2</p>
+				
+				<ul>
+					<li><a href="http://twitter.com/outrunthewolf" title="Twitter" target="_blank">Twitter</a></li>
+					<li><a href="https://github.com/outrunthewolf?rel=author" title="GitHub" target="_blank">GitHub</a></li>
+					<li><a href="http://plus.google.com/outrunthewolf?rel=author" title="Google+" target="_blank">Google+</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-34540071-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</body>
+</html>
+
+
